@@ -1,7 +1,8 @@
 
 import React from 'react';
 
-import Movies from '../screens/movies';
+import Movies from '../screens/movies/home';
+import MovieDetail from '../screens/movies/detail';
 import {createStackNavigator} from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
@@ -12,7 +13,12 @@ const AppStack = () => {
       <Stack.Screen
         name="Home"
         component={Movies}
-        options={{title: 'Busqueda películas'}}
+        options={{title: 'Search movies'}}
+      />
+      <Stack.Screen
+        name="Detail"
+        component={MovieDetail}
+        options={{title: 'Detail movie'}}
       />
     </Stack.Navigator>
   );
